@@ -1,3 +1,12 @@
+
 import * as gr from "react-icons/gr";
 import { IconSet } from "../components/IconSet.tsx";
-export default function Home() { return (<IconSet libId="gr" icons={gr}/>);}
+import { SideBar } from "../components/sidebar.tsx";
+export default function Page() {
+  return (
+    <div class="flex h-full">
+      <SideBar/>
+      <IconSet libId="gr" icons={gr}/>
+    </div>
+  );
+}

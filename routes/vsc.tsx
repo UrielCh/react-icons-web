@@ -1,3 +1,12 @@
+
 import * as vsc from "react-icons/vsc";
 import { IconSet } from "../components/IconSet.tsx";
-export default function Home() { return (<IconSet libId="vsc" icons={vsc}/>);}
+import { SideBar } from "../components/sidebar.tsx";
+export default function Page() {
+  return (
+    <div class="flex h-full">
+      <SideBar/>
+      <IconSet libId="vsc" icons={vsc}/>
+    </div>
+  );
+}

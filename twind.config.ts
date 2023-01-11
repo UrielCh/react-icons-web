@@ -11,6 +11,9 @@ const twConfig = {
   selfURL: import.meta.url,
 };
 twConfig.theme.extend = {
+  spacing: {
+    '128': '38rem',
+  },
   animation: {
   },
   boxShadow: {

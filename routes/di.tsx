@@ -1,3 +1,12 @@
+
 import * as di from "react-icons/di";
 import { IconSet } from "../components/IconSet.tsx";
-export default function Home() { return (<IconSet libId="di" icons={di}/>);}
+import { SideBar } from "../components/sidebar.tsx";
+export default function Page() {
+  return (
+    <div class="flex h-full">
+      <SideBar/>
+      <IconSet libId="di" icons={di}/>
+    </div>
+  );
+}

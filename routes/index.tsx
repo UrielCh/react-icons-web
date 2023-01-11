@@ -1,9 +1,12 @@
-import { Head } from "$fresh/runtime.ts";
 import * as bs from "react-icons/bs";
 import { IconSet } from "../components/IconSet.tsx";
+import { SideBar } from "../components/sidebar.tsx";
 
 export default function Home() {
   return (
-    <IconSet libId="bs" icons={bs}/>
+    <div class="flex h-full">
+      <SideBar/>
+      <IconSet libId="bs" icons={bs}/>
+    </div>
   );
 }
