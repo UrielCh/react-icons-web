@@ -1,5 +1,21 @@
-import { Options } from "$fresh/plugins/twind.ts";
+import { defineConfig } from "@twind/core"
+import presetTailwind from "@twind/preset-tailwind";
+import { type Options } from "./plugins/twindv1.ts";
 
-export default {
+const twConfig = {
+  ...defineConfig({
+    rules: [],
+    presets: [presetTailwind()],
+  }),
+  // darkMode: 'class',
   selfURL: import.meta.url,
-} as Options;
+};
+twConfig.theme.extend = {
+  animation: {
+  },
+  boxShadow: {
+  },
+  keyframes: {
+  }
+} ;
+export default twConfig as unknown as Options;
