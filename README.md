@@ -1,2 +1,11 @@
-# react-icons-web
-deno version of https://react-icons.github.io/react-icons/
+# fresh project
+
+### Usage
+
+Start the project:
+
+```
+deno task start
+```
+
+This will watch the project directory and restart as necessary.
