@@ -7,10 +7,11 @@ import { type Options } from "./plugins/twindv1.ts";
 const twConfig: Options = {
   ...defineConfig<TailwindTheme, Preset<TailwindTheme>[]>({
     rules: [
+      ['md-code-block', "bg-zinc-800 block rounded-xl p-4 font-mono font-semibold text-lg text-white"],
       ["code-string", "text-green-500"],
-      ['md_string', 'text-lime-300'],
-      ['md_special', 'text-purple-400'],
-      ['md_keyword', 'text-cyan-300'],
+      ['md-string', 'text-lime-300'],
+      ['md-special', 'text-purple-400'],
+      ['md-keyword', 'text-cyan-300'],
     ],
     presets: [presetTailwind()],
   }),

@@ -1,18 +1,16 @@
+import { JSX } from "preact";
 import { Head } from "$fresh/runtime.ts";
 import SideBar from "Sidebar";
 import { providers } from "../components/providers.ts";
+import miniFormater from "../components/miniFormater.tsx";
 
 const title = "React icon for deno";
-const md_code_block =
-  "bg-zinc-800 block rounded-xl p-4 font-mono font-semibold text-lg text-white";
-const md_string = "text-lime-300";
-const md_special = "text-purple-400";
-const md_keyword = "text-cyan-300";
 
-const kw = (text:string) => ( <span class={md_keyword}>{text}</span>);
-const special = (text:string) => ( <span class={md_special}>{text}</span>);
-const str = (text:string) => ( <span class={md_string}>{text}</span>);
+const kw = (text:string) => ( <span class="md-keyword">{text}</span>);
+const special = (text:string) => ( <span class='md-special'>{text}</span>);
+const str = (text:string) => ( <span class='md-string'>{text}</span>);
 const std = (text:string) => ( <span>{text}</span>);
+
 
 export default function Home() {
 
@@ -34,22 +32,19 @@ export default function Home() {
         <div>First update your <span class="font-mono">import_map.json</span> with:</div>
 
         <h2 class="text-4xl py-3">Import map</h2>
-        <pre class={md_code_block}>
-        <span class={md_special}>{"{"}</span><br/>
-
+        <pre class="md-code-block">
+          {miniFormater('{', '\n')}
         {Object.keys(providers).map((libId) => <>
-          {"  "} <span class={md_string}>"react-icons/{libId}"</span><span class={md_special}>: </span><span class={md_string}>"https://deno.land/x/react_icons@0.2.3/{libId}/mod.ts"</span><span class={md_special}>,</span><br/>
+          {miniFormater('  ', `"react-icons/${libId}"`, ': ', `"https://deno.land/x/react_icons@0.2.3/${libId}/mod.ts"`, ', ', '\n')}
         </>)}
-        <span class={md_special}>{"}"}</span>
+        {miniFormater('}', '\n')}
         </pre>
 
         <h2 class="text-4xl py-3">Usage</h2>
-        <pre class={md_code_block}>
-        {kw('import ')}{special('{')}{std(' FaBeer ')}{special('}')}{kw(' from ')}{str('"react-icons/fa"')}{special(';')}<br/>
-        <br/>
-        {kw('export default function ')}{std('comp')}{special('() {')}<br/>
-        {'  '}{kw('return ')}{std('<')}{kw('h3')}{std('> Lets go for a <')}{kw('FaBeer')}{std('/>? </')}{kw('h3')}{std('>')}<br/>
-        {kw('}')}<br/>
+        <pre class='md-code-block'>
+        {miniFormater('import ', '{ ', 'FaBeer', ' } ', 'from ', '"react-icons/fa"', ";", '\n')}
+        {miniFormater('export ', 'default ', 'function ', 'comp', '()', ' {', '\n')}
+        {miniFormater('  ', 'return ', '<h3>', 'Lets go for a ', '<FaBeer/>', '?', '</h3>', '\n', '}', '\n')}
         </pre>
       </div>
     </div>

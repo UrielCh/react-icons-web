@@ -20,7 +20,6 @@ declare module "preact" {
 
 export function setup({ selfURL: _selfURL, ...config }: Options, sheet: Sheet) {
     twSetup(config, sheet);
-
     const originalHook = preactOptions.vnode;
     preactOptions.vnode = (vnode: VNode<JSX.DOMAttributes<EventTarget>>) => {
         if (typeof vnode.type === "string" && typeof vnode.props === "object") {
