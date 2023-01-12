@@ -1,9 +1,10 @@
 import { JSX, options as preactOptions, VNode } from "preact";
 import { TwindConfig, setup as twSetup, Sheet, tw } from "@twind/core";
+import { type TailwindTheme } from "@twind/preset-tailwind";
 
 export const STYLE_ELEMENT_ID = "__FRSH_TWIND";
 
-export interface Options extends TwindConfig {
+export interface Options extends TwindConfig<TailwindTheme> {
     /** The import.meta.url of the module defining these options. */
     selfURL: string;
 }
@@ -21,8 +22,7 @@ export function setup({ selfURL: _selfURL, ...config }: Options, sheet: Sheet) {
     twSetup(config, sheet);
 
     const originalHook = preactOptions.vnode;
-    // deno-lint-ignore no-explicit-any
-    preactOptions.vnode = (vnode: VNode<JSX.DOMAttributes<any>>) => {
+    preactOptions.vnode = (vnode: VNode<JSX.DOMAttributes<EventTarget>>) => {
         if (typeof vnode.type === "string" && typeof vnode.props === "object") {
             const { props } = vnode;
             const classes: string[] = [];
@@ -37,7 +37,6 @@ export function setup({ selfURL: _selfURL, ...config }: Options, sheet: Sheet) {
                 props.class = classes.join(" ");
             }
         }
-
         originalHook?.(vnode);
     };
 }
