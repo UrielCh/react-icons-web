@@ -30,16 +30,17 @@ export default function IconSet(
 
         <h2 class="text-4xl py-3">{icons.length} Icons</h2>
         <div class="mx-auto flex flex-wrap block gap-4">
-          {icons.map(([name, ico]) => (
-            <div class="flex flex-col items-center justify-center text-center min-h-[64px]">
+          {icons.map(([name, ico]) => {
+            const svg = ico({ class: "text-center w-48 " });
+            return <div class="flex flex-col items-center justify-center text-center min-h-[64px]">
               {/*<div class="p-2 w-48 flex items-center flex-col border rounded-xl">*/}
               <div class="p-6 box-border p-4 border-2 rounded-md shadow-black">
-                {ico({ class: "text-center w-48 " })}
+                {svg}
               </div>
               {/*</div>*/}
               <div class="mt-2">{name}</div>
             </div>
-          ))}
+          })}
         </div>
       </div>
     </>
