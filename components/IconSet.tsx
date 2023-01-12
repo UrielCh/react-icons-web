@@ -1,8 +1,7 @@
-import { Head } from "$fresh/runtime.ts";
 import { JSX } from "preact";
 import { IconBaseProps } from "https://deno.land/x/react_icons@0.2.3/lib/mod.tsx";
 import { providers } from "../components/providers.ts";
-import miniFormater from "./miniFormater.tsx";
+import IconSetHeader from './IconSetHeader.tsx';
 
 interface Props {
   //     icons: Array<[string, ((props: IconBaseProps) => JSX.Element)]>
@@ -19,49 +18,8 @@ export default function IconSet(
   const { name } = provider;
   return (
     <>
-      <Head>
-        <title>{name}</title>
-      </Head>
       <div class="flex flex-col p-2 text-zinc-800">
-        <h1 class="text-6xl py-3 pt-8">{name}</h1>
-        <table class="text-left">
-          <tbody>
-            <tr>
-              <th class="font-bold text-xl">Licence</th>
-              <td>
-                <a
-                  href={provider.licence[1]}
-                  class="text-sky-600 font-semibold"
-                >
-                  {provider.licence[0]}
-                </a>
-              </td>
-            </tr>
-            <tr>
-              <th class="font-bold text-xl">Project</th>
-              <td>
-                <a
-                  href={provider.projectUrl}
-                  class="text-sky-600 font-semibold"
-                >
-                  {provider.projectUrl}
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <h2 class="text-4xl py-3">Import map</h2>
-
-        <pre class='md-code-block'>
-          {miniFormater("{", '\n',
-         "  ", `"react-icons/${libId}"`, ': ', `"https://deno.land/x/react_icons@0.2.3/${libId}/mod.ts"`, ',', '\n',
-          "}", '\n')}
-        </pre>
-
-        <h2 class="text-4xl py-3">Import</h2>
-        <pre class='md-code-block' id="importStatement">
-        {miniFormater("import ", '*', ' as ', `${libId}`, ' from ', `"react-icons/${libId}"`, ';', '\n')}
-        </pre>
+        <IconSetHeader libId={libId} provider={provider}/>
         <input
           type="text"
           value={`import * as ${libId}} from "react-icons/${libId}}";`}
