@@ -1,7 +1,7 @@
 import { Head } from "$fresh/runtime.ts";
 import { JSX } from "preact";
 import { IconBaseProps } from "https://deno.land/x/react_icons@0.2.3/lib/mod.tsx";
-import { providers } from "./providers.ts"
+import { providers } from "../components/providers.ts"
 
 interface Props {
   //     icons: Array<[string, ((props: IconBaseProps) => JSX.Element)]>
@@ -9,7 +9,7 @@ interface Props {
   libId: keyof typeof providers;
 }
 
-export function IconSet(props: Props & JSX.HTMLAttributes<HTMLButtonElement>) {
+export default function IconSet(props: Props & JSX.HTMLAttributes<HTMLButtonElement>) {
   const icons = Object.entries(props.icons);
   const provider = providers[props.libId];
   const { name } = provider;
@@ -17,7 +17,6 @@ export function IconSet(props: Props & JSX.HTMLAttributes<HTMLButtonElement>) {
   const md_string = 'text-lime-300';
   const md_special = 'text-purple-400';
   const md_keyword = 'text-cyan-300';
-
   return (
     <>
       <Head>
@@ -47,17 +46,18 @@ export function IconSet(props: Props & JSX.HTMLAttributes<HTMLButtonElement>) {
         </pre>
 
         <h2 class="text-4xl py-3">Import</h2>
-        <pre class={md_code_block}>
+        <pre class={md_code_block} id="importStatement">
         <span class={md_keyword}>import</span> * <span class={md_keyword}>as</span> {props.libId} <span class={md_keyword}>from</span> <span class="text-green-500">"react-icons/{props.libId}"</span><span class={md_special}>;</span>
         </pre>
-
-        <h2 class="text-4xl py-3">Icons</h2>
+        <input type="text" value={`import * as ${props.libId}} from "react-icons/${props.libId}}";`} id="myInput" class="hidden"></input>
+        
+        <h2 class="text-4xl py-3">{icons.length} Icons</h2>
         <div class="mx-auto flex flex-wrap block gap-4">
           {icons.map(([name, ico]) => (
-            <div class="flex flex-col items-center ">
-              <div class="p-2 w-48 flex items-center flex-col border rounded-xl">
-                <div class="p-6 min-h-[64px]">{ico({ })}</div>
-              </div>
+            <div class="flex flex-col items-center justify-center text-center min-h-[64px]">
+              {/*<div class="p-2 w-48 flex items-center flex-col border rounded-xl">*/}
+                <div class="p-6 box-border p-4 border-2 rounded-md shadow-black">{ico({ class:"text-center w-48 "})}</div>
+              {/*</div>*/}
               <div class="mt-2">{name}</div>
             </div>
           ))}

@@ -30,6 +30,8 @@
     "react-icons/wi":  "https://deno.land/x/react_icons@0.2.3/wi/mod.ts",
     "react-icons/cg":  "https://deno.land/x/react_icons@0.2.3/cg/mod.ts",
     "react-icons/tfi": "https://deno.land/x/react_icons@0.2.3/tfi/mod.ts",
-    "react-icons/vsc": "https://deno.land/x/react_icons@0.2.3/vsc/mod.ts"
+    "react-icons/vsc": "https://deno.land/x/react_icons@0.2.3/vsc/mod.ts",
+    "IconSet": "./components/IconSet.tsx",
+    "Sidebar": "./components/sidebar.tsx"
   }
 }

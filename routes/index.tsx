@@ -1,7 +1,5 @@
 import { Head } from "$fresh/runtime.ts";
-import * as bs from "react-icons/bs";
-import { IconSet } from "../components/IconSet.tsx";
-import { SideBar } from "../components/sidebar.tsx";
+import SideBar from "Sidebar";
 import { providers } from "../components/providers.ts";
 
 const title = "React icon for deno";

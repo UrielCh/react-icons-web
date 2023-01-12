@@ -1,7 +1,7 @@
 
 import * as ai from "react-icons/ai";
-import { IconSet } from "../components/IconSet.tsx";
-import { SideBar } from "../components/sidebar.tsx";
+import IconSet from "IconSet";
+import SideBar from "Sidebar";
 export default function Page() {
   return (
     <div class="flex h-full">

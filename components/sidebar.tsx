@@ -1,7 +1,7 @@
 import { JSX } from "preact";
 import { providers } from "./providers.ts";
 
-export function SideBar(props: JSX.HTMLAttributes<HTMLButtonElement>) {
+export default function SideBar(props: JSX.HTMLAttributes<HTMLButtonElement>) {
   const entrs = Object.entries(providers).filter(([a]) => {
     if (a.startsWith("hi")) {
       return false;
