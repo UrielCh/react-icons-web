@@ -24,13 +24,14 @@ import * as $17 from "./routes/io5.tsx";
 import * as $18 from "./routes/lu.tsx";
 import * as $19 from "./routes/md.tsx";
 import * as $20 from "./routes/ri.tsx";
-import * as $21 from "./routes/si.tsx";
-import * as $22 from "./routes/sl.tsx";
-import * as $23 from "./routes/tb.tsx";
-import * as $24 from "./routes/tfi.tsx";
-import * as $25 from "./routes/ti.tsx";
-import * as $26 from "./routes/vsc.tsx";
-import * as $27 from "./routes/wi.tsx";
+import * as $21 from "./routes/rx.tsx";
+import * as $22 from "./routes/si.tsx";
+import * as $23 from "./routes/sl.tsx";
+import * as $24 from "./routes/tb.tsx";
+import * as $25 from "./routes/tfi.tsx";
+import * as $26 from "./routes/ti.tsx";
+import * as $27 from "./routes/vsc.tsx";
+import * as $28 from "./routes/wi.tsx";
 import * as $$0 from "./islands/Counter.tsx";
 
 const manifest = {
@@ -56,13 +57,14 @@ const manifest = {
     "./routes/lu.tsx": $18,
     "./routes/md.tsx": $19,
     "./routes/ri.tsx": $20,
-    "./routes/si.tsx": $21,
-    "./routes/sl.tsx": $22,
-    "./routes/tb.tsx": $23,
-    "./routes/tfi.tsx": $24,
-    "./routes/ti.tsx": $25,
-    "./routes/vsc.tsx": $26,
-    "./routes/wi.tsx": $27,
+    "./routes/rx.tsx": $21,
+    "./routes/si.tsx": $22,
+    "./routes/sl.tsx": $23,
+    "./routes/tb.tsx": $24,
+    "./routes/tfi.tsx": $25,
+    "./routes/ti.tsx": $26,
+    "./routes/vsc.tsx": $27,
+    "./routes/wi.tsx": $28,
   },
   islands: {
     "./islands/Counter.tsx": $$0,
