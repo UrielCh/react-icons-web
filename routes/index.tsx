@@ -35,8 +35,8 @@ export default function Home() {
         <pre class="md-code-block">
           {miniFormater('{', '\n')}
         {Object.keys(providers).map((libId) => <>
-          {miniFormater('  ', `"react-icons/${libId}"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.2/mod.ts"`, ', ', '\n')}
-          {miniFormater('  ', `"react-icons/${libId}/"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.2/ico/"`, ', ', '\n')}
+          {miniFormater('  ', `"react-icons/${libId}"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.6/mod.ts"`, ', ', '\n')}
+          {miniFormater('  ', `"react-icons/${libId}/"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.6/ico/"`, ', ', '\n')}
         </>)}
         {miniFormater('}', '\n')}
         </pre>
