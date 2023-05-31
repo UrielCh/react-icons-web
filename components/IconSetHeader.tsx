@@ -6,12 +6,13 @@ import { Provider, providers } from "./providers.ts";
 interface Props {
   libId: keyof typeof providers;
   provider: Provider;
+  first: string;
 }
 
 export default function IconSetHeader(
   props: Props & JSX.HTMLAttributes<HTMLButtonElement>,
 ) {
-  const { provider, libId } = props;
+  const { provider, libId, first } = props;
   const { name } = provider;
   return (
     <>
@@ -57,6 +58,11 @@ export default function IconSetHeader(
       <h2 class="text-4xl py-3">Import</h2>
       <pre class="md-code-block" id="importStatement">
       {miniFormater("import ", '*', ' as ', `${libId}`, ' from ', `"react-icons/${libId}"`, ';', '\n')}
+      </pre>
+
+      <h2 class="text-4xl py-3">import just one</h2>
+      <pre class="md-code-block" id="importStatementOne">
+      {miniFormater("import ", {text: first, attr:{id:'one-name'}}, ' from ', {text:`"react-icons/${libId}/${first}"`, attr:{id:'one-import'}}, ';', '\n')}
       </pre>
     </>
   );
