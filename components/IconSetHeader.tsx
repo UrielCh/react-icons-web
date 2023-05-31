@@ -62,7 +62,7 @@ export default function IconSetHeader(
 
       <h2 class="text-4xl py-3">import just one</h2>
       <pre class="md-code-block" id="importStatementOne">
-      {miniFormater("import ", {text: first, attr:{id:'one-name'}}, ' from ', {text:`"react-icons/${libId}/${first}"`, attr:{id:'one-import'}}, ';', '\n')}
+      {miniFormater("import ", {text: first, attr:{id:'one-name'}}, ' from ', {text:`"react-icons/${libId}/${first}.ts"`, attr:{id:'one-import'}}, ';', '\n')}
       </pre>
     </>
   );

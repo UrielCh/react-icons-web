@@ -9,6 +9,21 @@ interface Props {
   libId: keyof typeof providers;
 }
 
+const code = `
+function handleClick(event) {
+  const parent = event.currentTarget;
+  const dataIco = parent.dataset.ico;
+  const dataLibId = parent.dataset.libid;
+  console.log({dataIco, dataLibId});
+  const ename = document.getElementById('one-name');
+  const eimp = document.getElementById('one-import');
+  ename.textContent = dataIco;
+  eimp.textContent = '"react-icons/' + dataLibId + '/' + dataIco + '.ts"';
+}
+const icoElements = document.querySelectorAll('.ico');
+icoElements.forEach(function (element) {element.addEventListener('click', handleClick);});
+`
+
 export default function IconSet(
   props: Props & JSX.HTMLAttributes<HTMLButtonElement>,
 ) {
@@ -43,20 +58,7 @@ export default function IconSet(
           })}
         </div>
       </div>
-      <script>
-function handleClick(event) {
-  const parent = event.currentTarget;
-  const dataIco = parent.dataset.ico;
-  const dataLibId = parent.dataset.libid;
-  console.log({dataIco, dataLibId});
-  const ename = document.getElementById('one-name');
-  const eimp = document.getElementById('one-import');
-  ename.textContent = dataIco;
-  eimp.textContent = dataLibId + '/' + dataIco;
-}
-const icoElements = document.querySelectorAll('.ico');
-icoElements.forEach(function (element) {element.addEventListener('click', handleClick);});
-      </script>
+      <script dangerouslySetInnerHTML={{__html: code}}></script>
     </>
   );
 }
