@@ -15,17 +15,22 @@ import * as $8 from "./routes/fi.tsx";
 import * as $9 from "./routes/gi.tsx";
 import * as $10 from "./routes/go.tsx";
 import * as $11 from "./routes/gr.tsx";
-import * as $12 from "./routes/im.tsx";
-import * as $13 from "./routes/index.tsx";
-import * as $14 from "./routes/md.tsx";
-import * as $15 from "./routes/ri.tsx";
-import * as $16 from "./routes/si.tsx";
-import * as $17 from "./routes/sl.tsx";
-import * as $18 from "./routes/tb.tsx";
-import * as $19 from "./routes/tfi.tsx";
-import * as $20 from "./routes/ti.tsx";
-import * as $21 from "./routes/vsc.tsx";
-import * as $22 from "./routes/wi.tsx";
+import * as $12 from "./routes/hi.tsx";
+import * as $13 from "./routes/hi2.tsx";
+import * as $14 from "./routes/im.tsx";
+import * as $15 from "./routes/index.tsx";
+import * as $16 from "./routes/io.tsx";
+import * as $17 from "./routes/io5.tsx";
+import * as $18 from "./routes/lu.tsx";
+import * as $19 from "./routes/md.tsx";
+import * as $20 from "./routes/ri.tsx";
+import * as $21 from "./routes/si.tsx";
+import * as $22 from "./routes/sl.tsx";
+import * as $23 from "./routes/tb.tsx";
+import * as $24 from "./routes/tfi.tsx";
+import * as $25 from "./routes/ti.tsx";
+import * as $26 from "./routes/vsc.tsx";
+import * as $27 from "./routes/wi.tsx";
 import * as $$0 from "./islands/Counter.tsx";
 
 const manifest = {
@@ -42,17 +47,22 @@ const manifest = {
     "./routes/gi.tsx": $9,
     "./routes/go.tsx": $10,
     "./routes/gr.tsx": $11,
-    "./routes/im.tsx": $12,
-    "./routes/index.tsx": $13,
-    "./routes/md.tsx": $14,
-    "./routes/ri.tsx": $15,
-    "./routes/si.tsx": $16,
-    "./routes/sl.tsx": $17,
-    "./routes/tb.tsx": $18,
-    "./routes/tfi.tsx": $19,
-    "./routes/ti.tsx": $20,
-    "./routes/vsc.tsx": $21,
-    "./routes/wi.tsx": $22,
+    "./routes/hi.tsx": $12,
+    "./routes/hi2.tsx": $13,
+    "./routes/im.tsx": $14,
+    "./routes/index.tsx": $15,
+    "./routes/io.tsx": $16,
+    "./routes/io5.tsx": $17,
+    "./routes/lu.tsx": $18,
+    "./routes/md.tsx": $19,
+    "./routes/ri.tsx": $20,
+    "./routes/si.tsx": $21,
+    "./routes/sl.tsx": $22,
+    "./routes/tb.tsx": $23,
+    "./routes/tfi.tsx": $24,
+    "./routes/ti.tsx": $25,
+    "./routes/vsc.tsx": $26,
+    "./routes/wi.tsx": $27,
   },
   islands: {
     "./islands/Counter.tsx": $$0,

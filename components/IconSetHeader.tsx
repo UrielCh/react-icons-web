@@ -49,8 +49,9 @@ export default function IconSetHeader(
 
       <pre class="md-code-block">
         {miniFormater("{", '\n',
-       "  ", `"react-icons/${libId}"`, ': ', `"https://deno.land/x/react_icons@0.2.3/${libId}/mod.ts"`, ',', '\n',
-        "}", '\n')}
+       "  ", `"react-icons/${libId}"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.2/mod.ts"`, ',', '\n',
+       "  ", `"react-icons/${libId}/"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.2/ico/"`, ',', '\n',
+       "}", '\n')}
       </pre>
 
       <h2 class="text-4xl py-3">Import</h2>

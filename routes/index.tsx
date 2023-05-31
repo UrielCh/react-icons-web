@@ -35,7 +35,8 @@ export default function Home() {
         <pre class="md-code-block">
           {miniFormater('{', '\n')}
         {Object.keys(providers).map((libId) => <>
-          {miniFormater('  ', `"react-icons/${libId}"`, ': ', `"https://deno.land/x/react_icons@0.2.3/${libId}/mod.ts"`, ', ', '\n')}
+          {miniFormater('  ', `"react-icons/${libId}"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.2/mod.ts"`, ', ', '\n')}
+          {miniFormater('  ', `"react-icons/${libId}/"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.2/ico/"`, ', ', '\n')}
         </>)}
         {miniFormater('}', '\n')}
         </pre>
@@ -46,6 +47,15 @@ export default function Home() {
         {miniFormater('export ', 'default ', 'function ', 'comp', '()', ' {', '\n')}
         {miniFormater('  ', 'return ', '<h3>', 'Lets go for a ', '<FaBeer/>', '?', '</h3>', '\n', '}', '\n')}
         </pre>
+
+        <h2 class="text-4xl py-3">optimal Usage</h2>
+        <pre class='md-code-block'>
+        {miniFormater('import ', 'FaBeer', ' from ', '"react-icons/fa/FaBeer.ts"', ";", '\n')}
+        {miniFormater('export ', 'default ', 'function ', 'comp', '()', ' {', '\n')}
+        {miniFormater('  ', 'return ', '<h3>', 'Lets go for a ', '<FaBeer/>', '?', '</h3>', '\n', '}', '\n')}
+        </pre>
+
+
       </div>
     </div>
   );

@@ -3,15 +3,9 @@ import { providers } from "./providers.ts";
 
 export default function SideBar(props: JSX.HTMLAttributes<HTMLButtonElement>) {
   const entrs = Object.entries(providers).filter(([a]) => {
-    if (a.startsWith("hi")) {
-      return false;
-    }
-    if (a.startsWith("io")) {
-      return false;
-    }
-    if (a.startsWith("rx")) {
-      return false;
-    }
+    // if (a.startsWith("hi")) return false;
+    // if (a.startsWith("io")) return false;
+    // if (a.startsWith("rx")) return false;
     return true;
   });
   return (
