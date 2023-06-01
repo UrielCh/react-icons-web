@@ -1,4 +1,4 @@
-import { JSX } from "preact";
+// import { JSX } from "preact";
 import { Head } from "$fresh/runtime.ts";
 import SideBar from "Sidebar";
 import { providers } from "../components/providers.ts";
@@ -6,11 +6,10 @@ import miniFormater from "../components/miniFormater.tsx";
 
 const title = "React icon for deno";
 
-const kw = (text:string) => ( <span class="md-keyword">{text}</span>);
-const special = (text:string) => ( <span class='md-special'>{text}</span>);
-const str = (text:string) => ( <span class='md-string'>{text}</span>);
-const std = (text:string) => ( <span>{text}</span>);
-
+// const kw = (text:string) => ( <span class="md-keyword">{text}</span>);
+// const special = (text:string) => ( <span class='md-special'>{text}</span>);
+// const str = (text:string) => ( <span class='md-string'>{text}</span>);
+// const std = (text:string) => ( <span>{text}</span>);
 
 export default function Home() {
 
@@ -35,8 +34,8 @@ export default function Home() {
         <pre class="md-code-block">
           {miniFormater('{', '\n')}
         {Object.keys(providers).map((libId) => <>
-          {miniFormater('  ', `"react-icons/${libId}"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.6/mod.ts"`, ', ', '\n')}
-          {miniFormater('  ', `"react-icons/${libId}/"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.6/ico/"`, ', ', '\n')}
+          {miniFormater('  ', `"react-icons/${libId}"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.8/mod.ts"`, ', ', '\n')}
+          {miniFormater('  ', `"react-icons/${libId}/"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.8/ico/"`, ', ', '\n')}
         </>)}
         {miniFormater('}', '\n')}
         </pre>
