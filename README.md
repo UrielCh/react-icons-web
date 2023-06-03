@@ -1,4 +1,6 @@
-# fresh project
+# react icon for fresh
+
+Demo page availabe [here](https://react-icons.deno.dev/)
 
 ### Usage
 
