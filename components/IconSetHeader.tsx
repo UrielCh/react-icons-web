@@ -50,8 +50,8 @@ export default function IconSetHeader(
 
       <pre class="md-code-block">
         {miniFormater("{", '\n',
-       "  ", `"react-icons/${libId}"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.8/mod.ts"`, ',', '\n',
-       "  ", `"react-icons/${libId}/"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.8/ico/"`, ',', '\n',
+       "  ", `"react-icons/${libId}"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.9/mod.ts"`, ',', '\n',
+       "  ", `"react-icons/${libId}/"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.9/ico/"`, ',', '\n',
        "}", '\n')}
       </pre>
 
