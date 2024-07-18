@@ -1,5 +1,5 @@
 
-import * as ri from "react-icons/ri";
+import * as ri from "@preact-icons/ri";
 import IconSet from "IconSet";
 import SideBar from "Sidebar";
 export default function Page() {

@@ -1,5 +1,5 @@
 
-import * as tfi from "react-icons/tfi";
+import * as tfi from "@preact-icons/tfi";
 import IconSet from "IconSet";
 import SideBar from "Sidebar";
 export default function Page() {

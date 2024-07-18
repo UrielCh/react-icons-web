@@ -32,24 +32,21 @@ export default function Home() {
 
         <h2 class="text-4xl py-3">Import map</h2>
         <pre class="md-code-block">
-          {miniFormater('{', '\n')}
         {Object.keys(providers).map((libId) => <>
-          {miniFormater('  ', `"react-icons/${libId}"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.9/mod.ts"`, ', ', '\n')}
-          {miniFormater('  ', `"react-icons/${libId}/"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.9/ico/"`, ', ', '\n')}
+          {miniFormater('  ', "deno", " ", "add", " ", `@preact-icons/${libId}`, '\n')}
         </>)}
-        {miniFormater('}', '\n')}
         </pre>
 
         <h2 class="text-4xl py-3">Usage</h2>
         <pre class='md-code-block'>
-        {miniFormater('import ', '{ ', 'FaBeer', ' } ', 'from ', '"react-icons/fa"', ";", '\n')}
+        {miniFormater('import ', '{ ', 'FaBeer', ' } ', 'from ', '"@preact-icons/fa"', ";", '\n')}
         {miniFormater('export ', 'default ', 'function ', 'comp', '()', ' {', '\n')}
         {miniFormater('  ', 'return ', '<h3>', 'Lets go for a ', '<FaBeer/>', '?', '</h3>', '\n', '}', '\n')}
         </pre>
 
         <h2 class="text-4xl py-3">optimal Usage</h2>
         <pre class='md-code-block'>
-        {miniFormater('import ', 'FaBeer', ' from ', '"react-icons/fa/FaBeer.ts"', ";", '\n')}
+        {miniFormater('import ', 'FaBeer', ' from ', '"@preact-icons/fa/FaBeer"', ";", '\n')}
         {miniFormater('export ', 'default ', 'function ', 'comp', '()', ' {', '\n')}
         {miniFormater('  ', 'return ', '<h3>', 'Lets go for a ', '<FaBeer/>', '?', '</h3>', '\n', '}', '\n')}
         </pre>

@@ -1,5 +1,5 @@
 import { JSX } from "preact";
-import { IconBaseProps } from "https://deno.land/x/react_icons@1.0.0/mod.ts";
+import type { IconBaseProps } from "@preact-icons/common";
 import { providers } from "../components/providers.ts";
 import IconSetHeader from './IconSetHeader.tsx';
 
@@ -18,7 +18,7 @@ function handleClick(event) {
   const ename = document.getElementById('one-name');
   const eimp = document.getElementById('one-import');
   ename.textContent = dataIco;
-  eimp.textContent = '"react-icons/' + dataLibId + '/' + dataIco + '.ts"';
+  eimp.textContent = '"@preact-icons/' + dataLibId + '/' + dataIco + '.ts"';
 }
 const icoElements = document.querySelectorAll('.ico');
 icoElements.forEach(function (element) {element.addEventListener('click', handleClick);});
@@ -37,7 +37,7 @@ export default function IconSet(
         <IconSetHeader libId={libId} provider={provider} first={icons[0][0]} />
         <input
           type="text"
-          value={`import * as ${libId}} from "react-icons/${libId}}";`}
+          value={`import * as ${libId}} from "@preact-icons/${libId}}";`}
           id="myInput"
           class="hidden"
         >
@@ -50,7 +50,7 @@ export default function IconSet(
             return <div class="flex flex-col items-center justify-center text-center min-h-[64px] ico" data-ico={name} data-libid={libId}>
               {/*<div class="p-2 w-48 flex items-center flex-col border rounded-xl">*/}
               <div class="p-6 box-border p-4 border-2 rounded-md shadow-black">
-                {ico({ class: "w-10 h-10", size: "1em" })}
+                {ico({ class: "w-10 h-10", size: 28 })}
               </div>
               {/*</div>*/}
               <div class="mt-2">{name}</div>

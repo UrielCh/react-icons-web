@@ -46,23 +46,21 @@ export default function IconSetHeader(
           </tr>
         </tbody>
       </table>
-      <h2 class="text-4xl py-3">Import map</h2>
+
+      <h2 class="text-4xl py-3">install</h2>
 
       <pre class="md-code-block">
-        {miniFormater("{", '\n',
-       "  ", `"react-icons/${libId}"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.9/mod.ts"`, ',', '\n',
-       "  ", `"react-icons/${libId}/"`, ': ', `"https://cdn.jsdelivr.net/gh/urielch/react-icons-${libId}@1.0.9/ico/"`, ',', '\n',
-       "}", '\n')}
+        {miniFormater("deno", " ", 'add', " ", `@preact-icons/${libId}`, '\n')}
       </pre>
 
       <h2 class="text-4xl py-3">Import</h2>
       <pre class="md-code-block" id="importStatement">
-      {miniFormater("import ", '*', ' as ', `${libId}`, ' from ', `"react-icons/${libId}"`, ';', '\n')}
+      {miniFormater("import ", '*', ' as ', `${libId}`, ' from ', `"@preact-icons/${libId}"`, ';', '\n')}
       </pre>
 
       <h2 class="text-4xl py-3">import just one</h2>
       <pre class="md-code-block" id="importStatementOne">
-      {miniFormater("import ", {text: first, attr:{id:'one-name'}}, ' from ', {text:`"react-icons/${libId}/${first}.ts"`, attr:{id:'one-import'}}, ';', '\n')}
+      {miniFormater("import ", {text: first, attr:{id:'one-name'}}, ' from ', {text:`"@preact-icons/${libId}/${first}"`, attr:{id:'one-import'}}, ';', '\n')}
       </pre>
     </>
   );

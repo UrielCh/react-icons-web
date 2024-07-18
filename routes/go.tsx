@@ -1,5 +1,5 @@
 
-import * as go from "react-icons/go";
+import * as go from "@preact-icons/go";
 import IconSet from "IconSet";
 import SideBar from "Sidebar";
 export default function Page() {

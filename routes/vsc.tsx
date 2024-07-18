@@ -1,5 +1,5 @@
 
-import * as vsc from "react-icons/vsc";
+import * as vsc from "@preact-icons/vsc";
 import IconSet from "IconSet";
 import SideBar from "Sidebar";
 export default function Page() {

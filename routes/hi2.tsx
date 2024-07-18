@@ -1,5 +1,5 @@
 
-import * as hi2 from "react-icons/hi2";
+import * as hi2 from "@preact-icons/hi2";
 import IconSet from "IconSet";
 import SideBar from "Sidebar";
 export default function Page() {

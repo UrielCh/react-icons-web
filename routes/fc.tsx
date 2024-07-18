@@ -1,5 +1,5 @@
 
-import * as fc from "react-icons/fc";
+import * as fc from "@preact-icons/fc";
 import IconSet from "IconSet";
 import SideBar from "Sidebar";
 export default function Page() {
