@@ -30,7 +30,7 @@ export default function IconSet(
   const icons: Array<[name: string, componant: (props: IconBaseProps & { attr?: Record<string, string> }) => JSX.Element]> = Object.entries(props.icons);
   const { libId } = props;
   const provider = providers[libId];
-  const { name } = provider;
+  // const { name } = provider;
   return (
     <>
       <div class="container mx-auto p-2 text-zinc-800">

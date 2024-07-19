@@ -60,6 +60,8 @@ export default function IconSetHeader(
 
       <h2 class="text-4xl py-3">import just one</h2>
       <pre class="md-code-block" id="importStatementOne">
+      {miniFormater("import ", '{ ', {text: first, attr:{id:'one-name'}}, " }", ' from ', `"@preact-icons/${libId}"`, ';', '\n')}
+      {miniFormater("// ", 'or ', '\n')}
       {miniFormater("import ", {text: first, attr:{id:'one-name'}}, ' from ', {text:`"@preact-icons/${libId}/${first}"`, attr:{id:'one-import'}}, ';', '\n')}
       </pre>
     </>
