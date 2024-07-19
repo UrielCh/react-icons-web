@@ -30,7 +30,7 @@ export default function Home() {
         <br/>
         <div>First update your <span class="font-mono">import_map.json</span> with:</div>
 
-        <h2 class="text-4xl py-3">Import map</h2>
+        <h2 class="text-4xl py-3">install module</h2>
         <pre class="md-code-block">
         {Object.keys(providers).map((libId) => <>
           {miniFormater('  ', "deno", " ", "add", " ", `@preact-icons/${libId}`, '\n')}

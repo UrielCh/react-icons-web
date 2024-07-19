@@ -18,7 +18,7 @@ function handleClick(event) {
   const ename = document.getElementById('one-name');
   const eimp = document.getElementById('one-import');
   ename.textContent = dataIco;
-  eimp.textContent = '"@preact-icons/' + dataLibId + '/' + dataIco + '.ts"';
+  eimp.textContent = '"@preact-icons/' + dataLibId + '/' + dataIco + '"';
 }
 const icoElements = document.querySelectorAll('.ico');
 icoElements.forEach(function (element) {element.addEventListener('click', handleClick);});
