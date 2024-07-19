@@ -4,7 +4,7 @@ import SideBar from "Sidebar";
 import { providers } from "../components/providers.ts";
 import miniFormater from "../components/miniFormater.tsx";
 
-const title = "React-icon for preact";
+const title = "react-icon for preact";
 
 // const kw = (text:string) => ( <span class="md-keyword">{text}</span>);
 // const special = (text:string) => ( <span class='md-special'>{text}</span>);
@@ -46,7 +46,7 @@ export default function Home() {
         {miniFormater("js", '  ', 'return ', '<h3>', 'Lets go for a ', '<FaBeer/>', '?', '</h3>', '\n', '}', '\n')}
         </pre>
 
-        <h2 class="text-4xl py-3">optimal Usage</h2>
+        <h2 class="text-4xl py-3">If you only need a single icon</h2>
         <pre class='md-code-block'>
         {miniFormater("js", 'import ', 'FaBeer', ' from ', '"@preact-icons/fa/FaBeer"', ";", '\n')}
         {miniFormater("js", 'export ', 'default ', 'function ', 'comp', '()', ' {', '\n')}

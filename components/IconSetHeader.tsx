@@ -94,7 +94,7 @@ export default function IconSetHeader(
         {miniFormater("js", "import ", '*', ' as ', `${libId}`, ' from ', `"@preact-icons/${libId}"`, ';', '\n')}
       </pre>
 
-      <h2 class="text-4xl py-3">import just one</h2>
+      <h2 class="text-4xl py-3">If you only need a single icon</h2>
       <pre class="md-code-block" id="importStatementOne">
         {miniFormater("js", "import ", '{ ', { text: first, attr: { id: 'one-name' } }, " }", ' from ', `"@preact-icons/${libId}"`, ';', '\n')}
         {miniFormater("js", "// ", 'or ', '\n')}

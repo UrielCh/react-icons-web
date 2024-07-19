@@ -1,4 +1,4 @@
-# react icon for fresh
+# react-icon for fresh
 
 Demo page availabe [here](https://react-icons.deno.dev/)
 
